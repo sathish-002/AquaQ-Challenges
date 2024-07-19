@@ -1,7 +1,7 @@
 /Note:- I have stored this 500 inputs into the text file name called challenge3.txt and the starting position, i have stored it as p.
 
 q)
-q)show input:raze read0 `C:/Users/a259275/Downloads/challenge3.txt
+q)show input:raze read0 `challenge3.txt
 "LDRDLRDRDDRLRLDLLLUULURURLDULUUDRRDDRUDDRLRRULRDUDRUDRRLRDLDRULLDUUULDRRLDDLURLURRURLRLRUULDULDLLLUDLULDUUUDLDLLUUULDDLUURDUDDRULRULRULRDULRULULRLRDRDRULLRDRRRULLRDRDDRDULDDDUUDDRDRLRRRUUDDDULULLULURURLURU..
 q)
 q)

@@ -1,0 +1,89 @@
+GIVEN PROBLEM:-
+--------------
+
+No more rookie numbers - from now on, we're going to pump those numbers up.
+
+We want to find the numbers which have digits which don't decrease when reading the number from left-to-right.
+Example good numbers:
+1
+45
+777
+1245
+
+
+Example unwanted numbers:
+10
+97
+2099
+
+
+How many "good" numbers exist between 0 and your input (inclusive)?
+
+GIVEN INPUT:-
+-----------
+520185742
+
+--------------------------------------------------------------------------------------------------------------------
+
+SOLUTION:-
+---------
+q)input:til 520185742
+q)input
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 3..
+
+q)a:string input
+q)a
+,"0"
+,"1"
+,"2"
+,"3"
+,"4"
+,"5"
+,"6"
+,"7"
+,"8"
+,"9"
+"10"
+"11"
+"12"
+"13"
+"14"
+"15"
+"16"
+"17"
+"18"
+"19"
+"20"
+"21"
+"22"
+"23"
+"24"
+"25"
+"26"
+"27"
+"28"
+"29"
+"30"
+"31"
+"32"
+"33"
+"34"
+"35"
+"36"
+"37"
+"38"
+"39"
+"40"
+..
+
+q)f:{[i] b:a[i]; c:1 cut b; d:asc b; e:1 cut d; g:c~e; if[g=1b;p+:1]}
+
+q)i:0
+
+q)ic:520185742
+
+q)while[i<ic;f[i];i+:1]
+
+q)p
+47905
+q)

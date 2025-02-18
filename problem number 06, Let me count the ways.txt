@@ -1,0 +1,41 @@
+problem number: 06, Let me count the ways
+==========================================
+
+QUESTION:-
+========
+
+It can be useful to know how to break down a number - usually this is done with factors, but instead, let's try it with summable components. For a number, you can work out the possible combinations of non-negative integers which sum to that number. For example, these are the combinations of three numbers which sum to 3:
+0 0 3
+0 1 2
+0 2 1
+0 3 0
+1 0 2
+1 1 1
+1 2 0
+2 0 1
+2 1 0
+3 0 0
+
+
+The digit "1" occurs 9 times above. For your input, how many times does the character "1" appear in all combinations summing to that number?
+
+Note the number "11" would be twice, "21" once, so 1 21 11 would be 4 times.
+
+GIVEN INPUT:-
+===========
+
+3 numbers which sum to 123
+
+ANSWER:-
+======
+
+q)fun:{a:3?(0 + til 124); b:((sum a) = 123);if[b=1i;list,:enlist a]}
+q)
+q)
+q)i:0
+q)
+q)
+q)while[i<20000000;fun[];i+:1]
+q)
+q)sum (sum each (raze each string(distinct list)) = "1")
+6927i

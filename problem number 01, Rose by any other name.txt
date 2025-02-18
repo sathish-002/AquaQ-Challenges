@@ -1,0 +1,71 @@
+problem number: 01, Rose by any other name
+==========================================
+
+QUESTION:-
+========
+
+Setting a colour attribute on your webpage can be much more interesting than it appears - HTML/CSS will take any string and convert it into a hexadecimal representation for use in a webpage. For instance, text with tag:
+body bgcolor="kdb4life"
+
+produces a nice blue colour.
+The conversion process happens like so:
+
+  Set the string's non-hexadecimal characters to 0.
+  Pad the string length to the next multiple of 3.
+  Split the result into 3 equal sections.
+  The first two digits of each remaining section are the hex components.
+
+Above, "kdb4life" as an input string becomes
+0d40fe
+
+What is the six-character colour hex output of your input string?
+
+
+
+GIVEN INPUT:-
+===========
+
+do you think that maybe like, 1 in 10 people could be actually robots?
+
+
+ANSWER:-
+======
+q)
+q)
+q)show input:"do you think that maybe like, 1 in 10 people could be actually robots?"
+"do you think that maybe like, 1 in 10 people could be actually robots?"
+q)
+q)
+q)
+q)
+q)show r:ssr[input;" ";""]
+"doyouthinkthatmaybelike,1in10peoplecouldbeactuallyrobots?"
+q)
+q)
+q)
+q)
+q)
+q)show v:upper r
+"DOYOUTHINKTHATMAYBELIKE,1IN10PEOPLECOULDBEACTUALLYROBOTS?"
+q)
+q)
+q)
+q)
+q)
+q)p:("0";"1";"2";"3";"4";"5";"6";"7";"8";"9";"A";"B";"C";"D";"E";"F")
+q)
+q)
+q)
+q)
+q)
+q)
+q)
+q)function:{lower raze 2#'((`int$((count x) % 3)) cut ({$[x in p;x;"0"]}'[x]))}
+q)
+q)
+q)
+q)
+q)function[v]
+"d0000d"
+q)
+
